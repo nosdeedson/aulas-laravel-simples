@@ -14,7 +14,11 @@ class DisciplinaController extends Controller
      */
     public function index()
     {
-        //
+        $disciplinas = Disciplina::all();
+       // $teste = "teste";
+       // disciplinas is a folder
+        return view('disciplinas.index', ['disciplinas' => $disciplinas ]);
+       // return view('disciplinas.index', compact('disciplinas', "teste")); // sends the array disciplinas and the variable teste
     }
 
     /**
